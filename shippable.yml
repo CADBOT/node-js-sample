@@ -3,3 +3,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10.25
+
+after_success:
+  - git remote add dokku dokku@104.236.234.128:node-dokku
+  - git push dokku master
